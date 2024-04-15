@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: 0, 0, 0;
+  --background-start: 214, 219, 220;
+  --background-end: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: 255, 255, 255;
+    --background-start: 0, 0, 0;
+    --background-end: 0, 0, 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  color: rgb(var(--foreground));
+
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end))
+    )
+    rgb(var(--background-start));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
