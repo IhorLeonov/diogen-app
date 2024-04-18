@@ -1,9 +1,12 @@
 'use client';
 
-import { useCounterStore } from '@/stores/providers/counter-store-provider';
-import { useUserStore } from '@/stores/providers/user-store-provider';
+import React from 'react';
+import { useCounterStore } from '@/stores/counter/counter-provider';
+import { useUserStore } from '@/stores/user/user-provider';
 
-export const HomePage = () => {
+interface HomePageProps {}
+
+export const HomePage = ({}: HomePageProps) => {
   const { count, incrementCount, decrementCount } = useCounterStore(
     (state) => state,
   );

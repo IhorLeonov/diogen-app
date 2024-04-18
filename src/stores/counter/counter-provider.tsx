@@ -7,7 +7,7 @@ import {
   type CounterStore,
   createCounterStore,
   initCounterStore,
-} from '@/stores/counter-store';
+} from '@/stores/counter/counter-store';
 
 export const CounterStoreContext = createContext<StoreApi<CounterStore> | null>(
   null,
